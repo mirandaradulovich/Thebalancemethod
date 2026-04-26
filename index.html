@@ -1,1 +1,479 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Balance Method — Yoga &amp; Pilates Retreats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sand: #f5f0e8; --stone: #c8bfaf; --bark: #7a6a58;
+      --ink: #2c2620; --white: #fdfcfa;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--white); color: var(--ink); line-height: 1.7; }
+
+```
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.4rem 3rem;
+  background: rgba(253,252,250,0.93); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200,191,175,0.35);
+}
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--bark); font-size: 0.73rem; letter-spacing: 0.18em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+
+.hero { min-height: 100vh; position: relative; overflow: hidden; display: flex; align-items: flex-end; }
+.hero-img { position: absolute; inset: 0; background: url('Miranda-106.jpeg') center center / cover no-repeat; }
+.hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(44,38,32,0.72) 0%, rgba(44,38,32,0.3) 55%, rgba(44,38,32,0.05) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 0 3rem 6rem; max-width: 680px; }
+.hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s 0.3s forwards; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 7vw, 6rem); font-weight: 300; line-height: 1.05; color: var(--white); margin-bottom: 1.8rem; opacity: 0; animation: fadeUp 1s 0.5s forwards; }
+.hero h1 em { font-style: italic; color: var(--stone); }
+.hero-sub { max-width: 380px; color: rgba(253,252,250,0.75); font-size: 0.9rem; margin-bottom: 2.8rem; opacity: 0; animation: fadeUp 1s 0.7s forwards; }
+.btn { display: inline-block; padding: 1rem 2.5rem; border: 1px solid var(--white); color: var(--white); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; transition: all 0.3s; opacity: 0; animation: fadeUp 1s 0.9s forwards; }
+.btn:hover { background: var(--white); color: var(--ink); }
+.btn-dark { border-color: var(--ink); color: var(--ink); opacity: 1; animation: none; }
+.btn-dark:hover { background: var(--ink); color: var(--white); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+section { padding: 7rem 3rem; }
+.section-label { font-size: 0.64rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--stone); margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem; }
+.section-label::after { content:''; width:40px; height:1px; background:var(--stone); display:block; }
+.section-label.light { color: rgba(200,191,175,0.5); }
+.section-label.light::after { background: rgba(200,191,175,0.3); }
+
+#about { background: var(--white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; }
+.about-img { aspect-ratio: 3/4; overflow: hidden; position: relative; }
+.about-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.about-img:hover img { transform: scale(1.03); }
+.about-img-caption { position: absolute; bottom: 1.5rem; left: 1.5rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); background: rgba(44,38,32,0.5); padding: 0.4rem 0.8rem; backdrop-filter: blur(4px); }
+.about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.5rem; }
+.about-text h2 em { font-style: italic; color: var(--bark); }
+.about-text p { color: var(--bark); margin-bottom: 1rem; font-size: 0.92rem; }
+.about-text .btn-dark { margin-top: 1rem; }
+
+#credentials { background: var(--sand); padding-top: 0; }
+.cred-inner { max-width: 1100px; }
+.cred-top { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-bottom: 4rem; }
+.cred-img { aspect-ratio: 16/9; overflow: hidden; }
+.cred-img img { width:100%; height:100%; object-fit:cover; }
+.cred-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.25; color: var(--ink); margin-bottom: 1rem; }
+.cred-heading em { font-style: italic; color: var(--bark); }
+.cred-sub { font-size: 0.9rem; color: var(--bark); }
+.credentials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; }
+.credential-item { background: var(--white); padding: 2.2rem 1.8rem; transition: transform 0.3s; }
+.credential-item:hover { transform: translateY(-3px); }
+.credential-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--bark); opacity: 0.45; margin-bottom: 0.8rem; line-height: 1; }
+.credential-item h3 { font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; color: var(--ink); font-weight: 400; }
+.credential-item p { font-size: 0.82rem; color: var(--bark); }
+
+#retreats { background: var(--white); }
+.retreats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 1100px; }
+.retreat-card { position: relative; overflow: hidden; }
+.retreat-card-img { aspect-ratio: 4/5; overflow: hidden; }
+.retreat-card-img img { width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease; }
+.retreat-card:hover .retreat-card-img img { transform: scale(1.05); }
+.retreat-card-body { background: var(--sand); padding: 2rem 1.8rem; }
+.retreat-tag { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bark); margin-bottom: 0.8rem; display: block; }
+.retreat-card-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 300; margin-bottom: 0.6rem; line-height: 1.15; }
+.retreat-card-body p { font-size: 0.85rem; color: var(--bark); margin-bottom: 1.5rem; }
+.retreat-details { display: flex; gap: 1.5rem; font-size: 0.72rem; color: var(--stone); letter-spacing: 0.06em; border-top: 1px solid var(--stone); padding-top: 1.2rem; }
+.retreat-detail strong { display: block; color: var(--ink); font-weight: 400; font-size: 0.78rem; margin-bottom: 0.15rem; }
+
+.gallery-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; height: 280px; }
+.gallery-strip-item { overflow: hidden; }
+.gallery-strip-item img { width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease; }
+.gallery-strip-item:hover img { transform: scale(1.07); }
+
+#pricing { background: var(--ink); color: var(--white); }
+.pricing-intro { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.8vw, 2.3rem); font-weight: 300; color: var(--white); max-width: 480px; margin-bottom: 4rem; line-height: 1.3; }
+.pricing-intro em { font-style: italic; color: var(--stone); }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2px; max-width: 1100px; }
+.pricing-card { background: rgba(255,255,255,0.04); padding: 3rem 2.5rem; border: 1px solid rgba(200,191,175,0.12); position: relative; transition: background 0.3s; }
+.pricing-card.featured { background: rgba(200,191,175,0.08); border-color: rgba(200,191,175,0.32); }
+.pricing-card:hover { background: rgba(255,255,255,0.07); }
+.pricing-badge { position: absolute; top: -1px; left: 2.5rem; background: var(--bark); color: var(--white); font-size: 0.56rem; letter-spacing: 0.22em; text-transform: uppercase; padding: 0.26rem 0.8rem; }
+.pricing-name { font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); margin-bottom: 1.4rem; }
+.pricing-price { font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.3rem; }
+.pricing-price sup { font-size: 1.3rem; vertical-align: super; }
+.pricing-period { font-size: 0.74rem; color: var(--stone); margin-bottom: 2.2rem; }
+.pricing-features { list-style: none; margin-bottom: 2.5rem; }
+.pricing-features li { font-size: 0.82rem; color: var(--stone); padding: 0.6rem 0; border-bottom: 1px solid rgba(200,191,175,0.08); display: flex; align-items: baseline; gap: 0.75rem; }
+.pricing-features li::before { content: '—'; color: var(--bark); flex-shrink: 0; }
+.btn-light { display: block; padding: 0.9rem 2rem; border: 1px solid rgba(200,191,175,0.32); color: var(--white); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.3s; text-align: center; }
+.btn-light:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
+
+#testimonials { background: var(--sand); }
+.testimonials-top { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin-bottom: 4rem; }
+.testimonials-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.2; }
+.testimonials-heading em { font-style: italic; color: var(--bark); }
+.testimonials-sub { font-size: 0.9rem; color: var(--bark); margin-top: 1rem; }
+.testimonials-img { aspect-ratio: 16/9; overflow: hidden; }
+.testimonials-img img { width:100%; height:100%; object-fit:cover; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; max-width: 1100px; }
+.testimonial-card { background: var(--white); padding: 2.8rem 2.2rem; position: relative; }
+.testimonial-stars { position: absolute; top: 2.2rem; right: 2.2rem; color: var(--bark); font-size: 0.65rem; letter-spacing: 0.1em; opacity: 0.7; }
+.testimonial-quote { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; line-height: 0.8; color: var(--stone); margin-bottom: 1.2rem; opacity: 0.45; }
+.testimonial-text { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; font-weight: 300; color: var(--ink); line-height: 1.65; margin-bottom: 1.8rem; }
+.testimonial-author { display: flex; align-items: center; gap: 0.9rem; }
+.testimonial-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--sand); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: var(--bark); }
+.testimonial-name { font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.1rem; }
+.testimonial-retreat { font-size: 0.76rem; color: var(--stone); }
+
+#contact { background: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 6rem; max-width: 1100px; align-items: start; }
+.contact-info h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.5rem; }
+.contact-info h2 em { font-style: italic; color: var(--bark); }
+.contact-info p { color: var(--bark); font-size: 0.88rem; margin-bottom: 2.5rem; line-height: 1.8; }
+.contact-detail { font-size: 0.75rem; color: var(--bark); letter-spacing: 0.08em; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.7rem; }
+.contact-detail::before { content: '—'; color: var(--stone); }
+.contact-form { display: flex; flex-direction: column; gap: 1.4rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.45rem; }
+.form-group label { font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bark); }
+.form-group input, .form-group select, .form-group textarea { background: var(--sand); border: 1px solid transparent; padding: 0.85rem 1rem; font-family: 'Jost', sans-serif; font-size: 0.87rem; font-weight: 300; color: var(--ink); outline: none; transition: border-color 0.2s; resize: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--bark); }
+.form-group textarea { min-height: 120px; }
+.btn-submit { background: var(--ink); color: var(--white); border: none; padding: 1rem 2.5rem; font-family: 'Jost', sans-serif; font-size: 0.7rem; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer; transition: background 0.3s; align-self: flex-start; }
+.btn-submit:hover { background: var(--bark); }
+
+footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--white); letter-spacing:0.1em; }
+.footer-copy { font-size: 0.7rem; letter-spacing: 0.1em; }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a { color: var(--stone); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+
+@media (max-width: 900px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .nav-links li:nth-child(n+4) { display: none; }
+  section { padding: 5rem 1.5rem; }
+  .hero-content { padding: 0 1.5rem 4rem; }
+  .about-grid, .cred-top, .testimonials-top, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .retreats-grid { grid-template-columns: 1fr; }
+  .gallery-strip { grid-template-columns: repeat(3,1fr); height: 200px; }
+  .gallery-strip-item:nth-child(n+4) { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo">The Balance Method</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#retreats">Retreats</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Stories</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-img"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Yoga &amp; Pilates Retreats · Bali &amp; Beyond</p>
+      <h1>Find your<br/><em>stillness</em><br/>here.</h1>
+      <p class="hero-sub">Transformative retreats rooted in breath, movement, and the quiet wisdom of your body.</p>
+      <a href="#retreats" class="btn">Explore Retreats</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="Miranda-9.jpeg" alt="Miranda leading a meditation class in Bali" />
+        <div class="about-img-caption">Bali, 2024</div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">About Miranda</div>
+        <h2>A practice built on <em>presence</em></h2>
+        <p>I'm Miranda — a certified yoga and Pilates instructor with over a decade of teaching experience across four continents. My retreats are small, intentional, and deeply personal.</p>
+        <p>I believe transformation happens not through intensity, but through consistency, breath, and genuine care. Every retreat I lead is designed to meet you exactly where you are.</p>
+        <p>Whether you're returning to movement after a long pause, or deepening an existing practice, you'll leave with more than you arrived with.</p>
+        <a href="#contact" class="btn-dark btn">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="cred-inner">
+      <div class="cred-top">
+        <div>
+          <div class="section-label">Training &amp; Credentials</div>
+          <h2 class="cred-heading">A decade of <em>dedicated</em> study</h2>
+          <p class="cred-sub">Every qualification I hold is one I sought because it would make me a better teacher — not to collect letters after my name.</p>
+        </div>
+        <div class="cred-img">
+          <img src="Miranda-186.jpeg" alt="Miranda teaching Pilates" />
+        </div>
+      </div>
+      <div class="credentials-grid">
+        <div class="credential-item">
+          <div class="credential-num">01</div>
+          <h3>RYT-500 Yoga Alliance</h3>
+          <p>500-hour registered yoga teacher trained in Vinyasa, Yin, and Restorative traditions.</p>
+        </div>
+        <div class="credential-item">
+          <div class="credential-num">02</div>
+          <h3>STOTT Pilates Certified</h3>
+          <p>Comprehensive mat and reformer certification through one of the most respected institutions globally.</p>
+        </div>
+        <div class="credential-item">
+          <div class="credential-num">03</div>
+          <h3>Trauma-Informed</h3>
+          <p>Completed trauma-sensitive yoga facilitation training to create safe, inclusive spaces for all.</p>
+        </div>
+        <div class="credential-item">
+          <div class="credential-num">04</div>
+          <h3>10+ Years Teaching</h3>
+          <p>Studios, corporate settings, and international retreat centres across Europe and Asia.</p>
+        </div>
+        <div class="credential-item">
+          <div class="credential-num">05</div>
+          <h3>Nutrition Coaching</h3>
+          <p>Certified holistic nutrition coach, weaving nourishment into the full retreat experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="retreats">
+    <div class="section-label">Upcoming Retreats</div>
+    <div class="retreats-grid">
+      <div class="retreat-card">
+        <div class="retreat-card-img">
+          <img src="Miranda-37.jpeg" alt="Yoga class in Bali" />
+        </div>
+        <div class="retreat-card-body">
+          <span class="retreat-tag">Yoga · Meditation</span>
+          <h3>Stillness in Tuscany</h3>
+          <p>Seven days of morning yoga, afternoon meditation, and evening restorative practice among the rolling hills of rural Tuscany.</p>
+          <div class="retreat-details">
+            <div class="retreat-detail"><strong>Sep 6–12, 2025</strong>7 nights</div>
+            <div class="retreat-detail"><strong>From £2,200</strong>All inclusive</div>
+          </div>
+        </div>
+      </div>
+      <div class="retreat-card">
+        <div class="retreat-card-img">
+          <img src="Miranda-170.jpeg" alt="Pilates reformer class in Bali" />
+        </div>
+        <div class="retreat-card-body">
+          <span class="retreat-tag">Pilates · Breathwork</span>
+          <h3>Ocean Reset, Bali</h3>
+          <p>A five-day Pilates immersion on the cliffs of Uluwatu. Daily mat and reformer sessions paired with pranayama and ocean swims.</p>
+          <div class="retreat-details">
+            <div class="retreat-detail"><strong>Oct 18–22, 2025</strong>5 nights</div>
+            <div class="retreat-detail"><strong>From £1,800</strong>All inclusive</div>
+          </div>
+        </div>
+      </div>
+      <div class="retreat-card">
+        <div class="retreat-card-img">
+          <img src="Miranda-54.jpeg" alt="Restorative yoga class" />
+        </div>
+        <div class="retreat-card-body">
+          <span class="retreat-tag">Yoga · Pilates · Rest</span>
+          <h3>Winter Sanctuary, Alps</h3>
+          <p>A gentle winter escape combining slow yoga flows, Pilates conditioning, and deep rest in a private chalet in the French Alps.</p>
+          <div class="retreat-details">
+            <div class="retreat-detail"><strong>Jan 10–16, 2026</strong>6 nights</div>
+            <div class="retreat-detail"><strong>From £2,600</strong>All inclusive</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gallery-strip">
+    <div class="gallery-strip-item"><img src="Miranda-48.jpeg" alt="yoga class" /></div>
+    <div class="gallery-strip-item"><img src="Miranda-206.jpeg" alt="pilates reformer" /></div>
+    <div class="gallery-strip-item"><img src="Miranda-221.jpeg" alt="pilates teaching" /></div>
+    <div class="gallery-strip-item"><img src="Miranda-227.jpeg" alt="pilates class" /></div>
+    <div class="gallery-strip-item"><img src="Miranda-68.jpeg" alt="group meditation" /></div>
+  </div>
+
+  <section id="pricing">
+    <div class="section-label light">Pricing</div>
+    <p class="pricing-intro">Simple, honest pricing.<br/><em>Everything included.</em></p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-name">Shared Room</div>
+        <div class="pricing-price"><sup>£</sup>1,800</div>
+        <div class="pricing-period">per person, per retreat</div>
+        <ul class="pricing-features">
+          <li>All daily yoga &amp; Pilates classes</li>
+          <li>Shared twin accommodation</li>
+          <li>3 nourishing meals per day</li>
+          <li>Welcome &amp; closing ceremony</li>
+          <li>Retreat materials included</li>
+        </ul>
+        <a href="#contact" class="btn-light">Book This</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-name">Private Room</div>
+        <div class="pricing-price"><sup>£</sup>2,400</div>
+        <div class="pricing-period">per person, per retreat</div>
+        <ul class="pricing-features">
+          <li>All daily yoga &amp; Pilates classes</li>
+          <li>Private en-suite room</li>
+          <li>3 nourishing meals per day</li>
+          <li>1:1 integration session with Miranda</li>
+          <li>Welcome &amp; closing ceremony</li>
+          <li>Retreat materials included</li>
+        </ul>
+        <a href="#contact" class="btn-light">Book This</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-name">Private Retreat</div>
+        <div class="pricing-price"><sup>£</sup>4,800</div>
+        <div class="pricing-period">for couples or solo, per retreat</div>
+        <ul class="pricing-features">
+          <li>Fully bespoke itinerary</li>
+          <li>Private luxury accommodation</li>
+          <li>All meals &amp; private dining</li>
+          <li>Daily 1:1 sessions with Miranda</li>
+          <li>Personalised practice plan</li>
+          <li>Post-retreat 30-day support</li>
+        </ul>
+        <a href="#contact" class="btn-light">Enquire</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="testimonials-top">
+      <div>
+        <div class="section-label">What Guests Say</div>
+        <h2 class="testimonials-heading">Words from those who've <em>been there</em></h2>
+        <p class="testimonials-sub">Every retreat is limited to 10 guests. These are their words.</p>
+      </div>
+      <div class="testimonials-img">
+        <img src="Miranda-56.jpeg" alt="Restorative yoga class with hands-on assist" />
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">The Tuscany retreat completely shifted something in me. Miranda holds the space with such warmth and intelligence. I've done many retreats, but this was different. I came home lighter.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">Sarah M.</div>
+            <div class="testimonial-retreat">Stillness in Tuscany, 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">I came to Bali exhausted and left genuinely restored. The Pilates sessions were perfectly sequenced, the food was incredible, and Miranda's teaching style is unlike anyone I've practised with.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div>
+            <div class="testimonial-name">James T.</div>
+            <div class="testimonial-retreat">Ocean Reset, Bali, 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">As someone nervous about joining a group retreat, I felt immediately at ease. The group was small, the pace was gentle, and I genuinely felt seen throughout the whole week.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <div class="testimonial-name">Anna K.</div>
+            <div class="testimonial-retreat">Stillness in Tuscany, 2023</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Miranda's knowledge of both yoga and Pilates is extraordinary. She weaves them together so seamlessly that by the end of the week your body genuinely feels like a different instrument.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div>
+            <div class="testimonial-name">Rachel D.</div>
+            <div class="testimonial-retreat">Private Retreat, 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Contact</div>
+        <h2>Ready to <em>begin?</em></h2>
+        <p>Spaces are limited to 10 guests per retreat. Reach out to check availability, ask questions, or simply have a conversation about which retreat might be right for you.</p>
+        <div class="contact-detail">hello@thebalancemethod.com</div>
+        <div class="contact-detail">Instagram: @thebalancemethod</div>
+        <div class="contact-detail">Response within 48 hours</div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Your first name" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Your last name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Retreat of Interest</label>
+          <select>
+            <option value="">Select a retreat…</option>
+            <option>Stillness in Tuscany – Sep 2025</option>
+            <option>Ocean Reset, Bali – Oct 2025</option>
+            <option>Winter Sanctuary, Alps – Jan 2026</option>
+            <option>Private Retreat Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me a little about yourself and any questions you have…"></textarea>
+        </div>
+        <button class="btn-submit">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">The Balance Method</div>
+    <div class="footer-copy">© 2025 Miranda Radulovich. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#retreats">Retreats</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

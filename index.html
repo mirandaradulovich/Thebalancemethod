@@ -18,7 +18,6 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--white); color: var(--ink); line-height: 1.7; }
 
-```
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; background: rgba(253,252,250,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(200,191,175,0.35); }
 .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
@@ -26,7 +25,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; j
 .nav-links a:hover { color: var(--ink); }
 
 .hero { min-height: 100vh; position: relative; overflow: hidden; display: flex; align-items: flex-end; }
-.hero-img { position: absolute; inset: 0; background: url('Miranda-106.jpeg') center center / cover no-repeat; }
+.hero-img { position: absolute; inset: 0; background: linear-gradient(135deg,#7a6a58,#2c2620); }
 .hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(44,38,32,0.72) 0%, rgba(44,38,32,0.3) 55%, rgba(44,38,32,0.05) 100%); }
 .hero-content { position: relative; z-index: 2; padding: 0 3rem 6rem; max-width: 680px; }
 .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s 0.3s forwards; }
@@ -47,7 +46,7 @@ section { padding: 7rem 3rem; }
 
 #about { background: var(--white); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; }
-.about-img { aspect-ratio: 3/4; overflow: hidden; position: relative; }
+.about-img { aspect-ratio: 3/4; overflow: hidden; position: relative; background:#e5ddcf; }
 .about-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
 .about-img:hover img { transform: scale(1.03); }
 .about-img-caption { position: absolute; bottom: 1.5rem; left: 1.5rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); background: rgba(44,38,32,0.5); padding: 0.4rem 0.8rem; backdrop-filter: blur(4px); }
@@ -59,7 +58,7 @@ section { padding: 7rem 3rem; }
 #credentials { background: var(--sand); padding-top: 0; }
 .cred-inner { max-width: 1100px; }
 .cred-top { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-bottom: 4rem; }
-.cred-img { aspect-ratio: 16/9; overflow: hidden; }
+.cred-img { aspect-ratio: 16/9; overflow: hidden; background:#e5ddcf; }
 .cred-img img { width:100%; height:100%; object-fit:cover; }
 .cred-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.25; color: var(--ink); margin-bottom: 1rem; }
 .cred-heading em { font-style: italic; color: var(--bark); }
@@ -74,7 +73,7 @@ section { padding: 7rem 3rem; }
 #retreats { background: var(--white); }
 .retreats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 1100px; }
 .retreat-card { position: relative; overflow: hidden; }
-.retreat-card-img { aspect-ratio: 4/5; overflow: hidden; }
+.retreat-card-img { aspect-ratio: 4/5; overflow: hidden; background:#e5ddcf; }
 .retreat-card-img img { width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease; }
 .retreat-card:hover .retreat-card-img img { transform: scale(1.05); }
 .retreat-card-body { background: var(--sand); padding: 2rem 1.8rem; }
@@ -85,7 +84,7 @@ section { padding: 7rem 3rem; }
 .retreat-detail strong { display: block; color: var(--ink); font-weight: 400; font-size: 0.78rem; margin-bottom: 0.15rem; }
 
 .gallery-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; height: 280px; }
-.gallery-strip-item { overflow: hidden; }
+.gallery-strip-item { overflow: hidden; background:#e5ddcf; }
 .gallery-strip-item img { width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease; }
 .gallery-strip-item:hover img { transform: scale(1.07); }
 
@@ -112,7 +111,7 @@ section { padding: 7rem 3rem; }
 .testimonials-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.2; }
 .testimonials-heading em { font-style: italic; color: var(--bark); }
 .testimonials-sub { font-size: 0.9rem; color: var(--bark); margin-top: 1rem; }
-.testimonials-img { aspect-ratio: 16/9; overflow: hidden; }
+.testimonials-img { aspect-ratio: 16/9; overflow: hidden; background:#e5ddcf; }
 .testimonials-img img { width:100%; height:100%; object-fit:cover; }
 .testimonials-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; max-width: 1100px; margin-bottom: 4rem; }
 .testimonial-card { background: var(--white); padding: 1.8rem 1.5rem; position: relative; }
@@ -192,7 +191,7 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
   gap: 3px;
   padding: 0 3px;
 }
-.gallery-masonry-item { overflow: hidden; position: relative; }
+.gallery-masonry-item { overflow: hidden; position: relative; background:#e5ddcf; }
 .gallery-masonry-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
 .gallery-masonry-item:hover img { transform: scale(1.05); }
 .gallery-masonry-item.tall { grid-row: span 2; }
@@ -217,8 +216,6 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
 @media (max-width: 600px) {
   .gallery-masonry { grid-template-columns: repeat(2, 1fr); }
 }
-```
-
   </style>
 </head>
 <body>
@@ -234,8 +231,6 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- EARLY BIRD BANNER -->
 
   <div class="early-bird" id="early-bird">
     <p>🌿 Early Bird Special — First 3 tickets at 20% off · Offer ends 30 June 2026</p>
@@ -260,7 +255,7 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
   <section id="about">
     <div class="about-grid">
       <div class="about-img">
-        <img src="Miranda-68.jpeg" alt="Miri leading a meditation class in Bali" />
+        <img src="" alt="Miri leading a meditation class in Bali" />
         <div class="about-img-caption">Bali, 2025</div>
       </div>
       <div class="about-text">
@@ -287,55 +282,19 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
           <p class="cred-sub">Every qualification I hold is one I sought because it would make me a better teacher — not to collect letters after my name.</p>
         </div>
         <div class="cred-img">
-          <img src="Miranda-221.jpeg" alt="Miri teaching Pilates" />
+          <img src="" alt="Miri teaching Pilates" />
         </div>
       </div>
       <div class="credentials-grid">
-        <div class="credential-item">
-          <div class="credential-num">01</div>
-          <h3>200hr Yoga Teacher Training</h3>
-          <p>Blissology Yoga Teacher Collective, Samadi Bali, Indonesia (2015).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">02</div>
-          <h3>Yin Yoga Teacher Training</h3>
-          <p>60hrs — Yinspiration, covering Chinese Medicine, Meridian Yin &amp; Hip Anatomy (2025).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">03</div>
-          <h3>KX Pilates Certified</h3>
-          <p>KX Academy Dynamic Pilates training course (2022).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">04</div>
-          <h3>Prenatal &amp; Postnatal Pilates</h3>
-          <p>Summit Pilates — Pilates for Prenatal and Postpartum Clients (2024).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">05</div>
-          <h3>Psychology of Eating Coach</h3>
-          <p>Institute for the Psychology of Eating, certified by Marc David (2014).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">06</div>
-          <h3>Intuitive Eating Counsellor</h3>
-          <p>Helm Publishing — Intuitive Eating 4th Ed., 46 hours (2022).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">07</div>
-          <h3>Certified Breathwork Instructor</h3>
-          <p>Certified Pranayama Breathwork Instructor — Pranayama Sadhana, School of Pranic Studies (2021).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">08</div>
-          <h3>STRONG Instructor</h3>
-          <p>STRONG Academy Certified Instructor (2025).</p>
-        </div>
-        <div class="credential-item">
-          <div class="credential-num">09</div>
-          <h3>First Aid &amp; CPR</h3>
-          <p>Current First Aid, Emergency Life Support &amp; CPR — Allens Training (2025).</p>
-        </div>
+        <div class="credential-item"><div class="credential-num">01</div><h3>200hr Yoga Teacher Training</h3><p>Blissology Yoga Teacher Collective, Samadi Bali, Indonesia (2015).</p></div>
+        <div class="credential-item"><div class="credential-num">02</div><h3>Yin Yoga Teacher Training</h3><p>60hrs — Yinspiration, covering Chinese Medicine, Meridian Yin &amp; Hip Anatomy (2025).</p></div>
+        <div class="credential-item"><div class="credential-num">03</div><h3>KX Pilates Certified</h3><p>KX Academy Dynamic Pilates training course (2022).</p></div>
+        <div class="credential-item"><div class="credential-num">04</div><h3>Prenatal &amp; Postnatal Pilates</h3><p>Summit Pilates — Pilates for Prenatal and Postpartum Clients (2024).</p></div>
+        <div class="credential-item"><div class="credential-num">05</div><h3>Psychology of Eating Coach</h3><p>Institute for the Psychology of Eating, certified by Marc David (2014).</p></div>
+        <div class="credential-item"><div class="credential-num">06</div><h3>Intuitive Eating Counsellor</h3><p>Helm Publishing — Intuitive Eating 4th Ed., 46 hours (2022).</p></div>
+        <div class="credential-item"><div class="credential-num">07</div><h3>Certified Breathwork Instructor</h3><p>Certified Pranayama Breathwork Instructor — Pranayama Sadhana, School of Pranic Studies (2021).</p></div>
+        <div class="credential-item"><div class="credential-num">08</div><h3>STRONG Instructor</h3><p>STRONG Academy Certified Instructor (2025).</p></div>
+        <div class="credential-item"><div class="credential-num">09</div><h3>First Aid &amp; CPR</h3><p>Current First Aid, Emergency Life Support &amp; CPR — Allens Training (2025).</p></div>
       </div>
     </div>
   </section>
@@ -344,28 +303,16 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
     <div class="section-label">Upcoming Retreats</div>
     <div style="max-width:1100px; display:grid; grid-template-columns:1fr 1fr; gap:2px;">
       <div class="retreat-card">
-        <div class="retreat-card-img"><img src="Miranda-186.jpeg" alt="Yoga class in Bali" /></div>
+        <div class="retreat-card-img"><img src="" alt="Yoga class in Bali" /></div>
         <div class="retreat-card-body">
           <span class="retreat-tag">Yoga · Pilates · Group Fitness · Yin · Breathwork · Meditation · Komune Resort, Bali</span>
           <h3>The Balance Method 3.0</h3>
           <p>An intimate retreat experience. All guests move together morning and evening — choose your midday stream. Same inclusions, same price.</p>
           <div style="margin-bottom:1.5rem;">
             <div style="font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--bark); margin-bottom:0.8rem;">Daily Schedule</div>
-            <div style="display:flex; align-items:center; gap:1rem; font-size:0.83rem; color:var(--ink); padding:0.5rem 0; border-bottom:1px solid var(--stone);">
-              <span style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--stone); min-width:70px;">Morning</span>
-              <span>Yoga — all guests together</span>
-            </div>
-            <div style="display:flex; align-items:flex-start; gap:1rem; font-size:0.83rem; color:var(--ink); padding:0.5rem 0; border-bottom:1px solid var(--stone);">
-              <span style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--stone); min-width:70px;">Midday</span>
-              <div>
-                <div style="margin-bottom:0.25rem;">Group A — Reformer Pilates</div>
-                <div>Group B — Group Fitness</div>
-              </div>
-            </div>
-            <div style="display:flex; align-items:center; gap:1rem; font-size:0.83rem; color:var(--ink); padding:0.5rem 0;">
-              <span style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--stone); min-width:70px;">Evening</span>
-              <span>Yin — all guests together</span>
-            </div>
+            <div style="display:flex; align-items:center; gap:1rem; font-size:0.83rem; color:var(--ink); padding:0.5rem 0; border-bottom:1px solid var(--stone);"><span style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--stone); min-width:70px;">Morning</span><span>Yoga — all guests together</span></div>
+            <div style="display:flex; align-items:flex-start; gap:1rem; font-size:0.83rem; color:var(--ink); padding:0.5rem 0; border-bottom:1px solid var(--stone);"><span style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--stone); min-width:70px;">Midday</span><div><div style="margin-bottom:0.25rem;">Group A — Reformer Pilates</div><div>Group B — Group Fitness</div></div></div>
+            <div style="display:flex; align-items:center; gap:1rem; font-size:0.83rem; color:var(--ink); padding:0.5rem 0;"><span style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--stone); min-width:70px;">Evening</span><span>Yin — all guests together</span></div>
           </div>
           <div class="retreat-details">
             <div class="retreat-detail"><strong>Sep 30 – Oct 4, 2026</strong>5 days · Komune Resort, Bali</div>
@@ -391,34 +338,26 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
   </section>
 
   <div class="gallery-strip">
-    <div class="gallery-strip-item"><img src="Miranda-48.jpeg" alt="yoga class" /></div>
-    <div class="gallery-strip-item"><img src="Miranda-206.jpeg" alt="pilates reformer" /></div>
-    <div class="gallery-strip-item"><img src="Miranda-37.jpeg" alt="pilates teaching" /></div>
-    <div class="gallery-strip-item"><img src="Miranda-227.jpeg" alt="pilates class" /></div>
-    <div class="gallery-strip-item"><img src="Miranda-9.jpeg" alt="group meditation" /></div>
+    <div class="gallery-strip-item"><img src="" alt="yoga class" /></div>
+    <div class="gallery-strip-item"><img src="" alt="pilates reformer" /></div>
+    <div class="gallery-strip-item"><img src="" alt="pilates teaching" /></div>
+    <div class="gallery-strip-item"><img src="" alt="pilates class" /></div>
+    <div class="gallery-strip-item"><img src="" alt="group meditation" /></div>
   </div>
 
-  <!-- GALLERY -->
-
   <section id="gallery">
-    <div class="gallery-title">
-      <div class="section-label">Gallery</div>
-    </div>
+    <div class="gallery-title"><div class="section-label">Gallery</div></div>
     <div class="gallery-masonry">
-      <div class="gallery-masonry-item tall"><img src="IMG_1848.JPG" alt="Handstand" /></div>
-      <div class="gallery-masonry-item"><img src="IMG_5770.jpeg" alt="Pilates reformer" /></div>
-      <div class="gallery-masonry-item"><img src="IMG_6688.JPG" alt="Yoga pose" /></div>
-      <div class="gallery-masonry-item tall"><img src="Miranda-99.jpeg" alt="Black and white" /></div>
-      <div class="gallery-masonry-item"><img src="IMG_1049.JPG" alt="Pilates class" /></div>
-      <div class="gallery-masonry-item"><img src="Miranda-136.jpeg" alt="Group sauna" /></div>
-      <div class="gallery-masonry-item"><img src="IMG_5769.JPG" alt="Meditation" /></div>
-      <div class="gallery-masonry-item wide"><img src="_DSC4897.jpg" alt="Group yoga" /></div>
-      <div class="gallery-masonry-item"><img src="IMG_0046.JPG" alt="Hands on assist" /></div>
-
-```
-</div>
-```
-
+      <div class="gallery-masonry-item tall"><img src="" alt="Handstand" /></div>
+      <div class="gallery-masonry-item"><img src="" alt="Pilates reformer" /></div>
+      <div class="gallery-masonry-item"><img src="" alt="Yoga pose" /></div>
+      <div class="gallery-masonry-item tall"><img src="" alt="Black and white" /></div>
+      <div class="gallery-masonry-item"><img src="" alt="Pilates class" /></div>
+      <div class="gallery-masonry-item"><img src="" alt="Group sauna" /></div>
+      <div class="gallery-masonry-item"><img src="" alt="Meditation" /></div>
+      <div class="gallery-masonry-item wide"><img src="" alt="Group yoga" /></div>
+      <div class="gallery-masonry-item"><img src="" alt="Hands on assist" /></div>
+    </div>
   </section>
 
   <section id="pricing">
@@ -461,9 +400,8 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
         </ul>
         <a href="#contact" class="btn-light">Book This</a>
       </div>
+    </div>
   </section>
-
-  <!-- SERVICES -->
 
   <section id="services">
     <div class="section-label">What I Offer</div>
@@ -503,152 +441,88 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
         <h2 class="testimonials-heading">Words from those who've <em>been there</em></h2>
         <p class="testimonials-sub">Real words from real guests. Every retreat is limited to a small group so everyone gets the attention they deserve.</p>
       </div>
-      <div class="testimonials-img">
-        <img src="Miranda-56.jpeg" alt="Restorative yoga class with hands-on assist" />
-      </div>
+      <div class="testimonials-img"><img src="" alt="Restorative yoga class with hands-on assist" /></div>
     </div>
     <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">I came back feeling really nourished, grounded, and genuinely re-energised. It was exactly what I needed. Please reach out when you have your next retreats — I'd love to be considered.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">A</div>
-          <div><div class="testimonial-name">Ange</div><div class="testimonial-retreat">Bali Retreat, 2026</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Miranda was outstanding — knowledgeable, warm, encouraging, and inspiring. Every class was engaging, well paced, and the right level of challenge. If you're thinking about it… go for it!</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">L</div>
-          <div><div class="testimonial-name">Louise</div><div class="testimonial-retreat">Bali Retreat, 2025</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Thank you for all the prep, your time for each of us individually, the music, photos, oils, healing touch — but most of all the energy you freely gave each and every one of us.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div><div class="testimonial-name">Mel</div><div class="testimonial-retreat">Bali Retreat, 2026</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">The retreat was so magical. I loved every minute and you all contributed to making it so special. I'm so keen to go again.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">K</div>
-          <div><div class="testimonial-name">Kaitlyn</div><div class="testimonial-retreat">Bali Retreat, 2025</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Really appreciated all the work you put into the sessions, and creating a space to feel safe whilst learning something new.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">B</div>
-          <div><div class="testimonial-name">Bec</div><div class="testimonial-retreat">Bali Retreat, 2023</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Thank you for a lovely and relaxing retreat and of course great company! My heart is full. Hope to see some of you in Perth next year.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div><div class="testimonial-name">Marina</div><div class="testimonial-retreat">Bali Retreat, 2025</div></div>
-        </div>
-      </div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"</div><p class="testimonial-text">I came back feeling really nourished, grounded, and genuinely re-energised. It was exactly what I needed. Please reach out when you have your next retreats — I'd love to be considered.</p><div class="testimonial-author"><div class="testimonial-avatar">A</div><div><div class="testimonial-name">Ange</div><div class="testimonial-retreat">Bali Retreat, 2026</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"</div><p class="testimonial-text">Miranda was outstanding — knowledgeable, warm, encouraging, and inspiring. Every class was engaging, well paced, and the right level of challenge. If you're thinking about it… go for it!</p><div class="testimonial-author"><div class="testimonial-avatar">L</div><div><div class="testimonial-name">Louise</div><div class="testimonial-retreat">Bali Retreat, 2025</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"</div><p class="testimonial-text">Thank you for all the prep, your time for each of us individually, the music, photos, oils, healing touch — but most of all the energy you freely gave each and every one of us.</p><div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">Mel</div><div class="testimonial-retreat">Bali Retreat, 2026</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"</div><p class="testimonial-text">The retreat was so magical. I loved every minute and you all contributed to making it so special. I'm so keen to go again.</p><div class="testimonial-author"><div class="testimonial-avatar">K</div><div><div class="testimonial-name">Kaitlyn</div><div class="testimonial-retreat">Bali Retreat, 2025</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"</div><p class="testimonial-text">Really appreciated all the work you put into the sessions, and creating a space to feel safe whilst learning something new.</p><div class="testimonial-author"><div class="testimonial-avatar">B</div><div><div class="testimonial-name">Bec</div><div class="testimonial-retreat">Bali Retreat, 2023</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"</div><p class="testimonial-text">Thank you for a lovely and relaxing retreat and of course great company! My heart is full. Hope to see some of you in Perth next year.</p><div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">Marina</div><div class="testimonial-retreat">Bali Retreat, 2025</div></div></div></div>
     </div>
 
-```
-<div class="video-label">Video Stories</div>
-<div style="max-width:1100px;">
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/oV3p-7tFyjw" title="Retreat highlight" allowfullscreen></iframe>
-  </div>
-</div>
-```
-
+    <div class="video-label">Video Stories</div>
+    <div style="max-width:1100px;">
+      <div class="video-wrap"><iframe src="https://www.youtube.com/embed/oV3p-7tFyjw" title="Retreat highlight" allowfullscreen></iframe></div>
+    </div>
   </section>
-
-  <!-- RETREAT INFO -->
 
   <section id="retreat-info" style="background:var(--sand); padding:7rem 3rem;">
     <div style="max-width:1100px;">
       <div class="section-label">Retreat Info</div>
       <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:2px;">
 
-```
-    <!-- Payment -->
-    <div style="background:var(--white); padding:2.5rem 2rem;">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">Securing Your Spot</div>
-      <p style="font-size:0.85rem; color:var(--bark); margin-bottom:1rem;">A non-refundable deposit of <strong style="color:var(--ink);">$500</strong> secures your place. Full payment can be made at time of booking or closer to the retreat date.</p>
-      <p style="font-size:0.85rem; color:var(--bark); margin-bottom:1rem;">Bank transfer details will be provided on enquiry. Invoices available on request.</p>
-      <p style="font-size:0.85rem; color:var(--bark);">Questions? Reach out at <strong style="color:var(--ink);">mother-food@outlook.com</strong> or 0487 400 753.</p>
-    </div>
-
-    <!-- Daily Schedule -->
-    <div style="background:var(--white); padding:2.5rem 2rem;">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">Sample Daily Flow</div>
-      <div style="font-size:0.78rem; color:var(--bark); line-height:1.9;">
-        <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">7:00am</span><span>Optional coffee or light snack</span></div>
-        <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">8:00am</span><span>Morning yoga — gentle flow with pranayama &amp; meditation</span></div>
-        <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">9:30am</span><span>Breakfast</span></div>
-        <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">11:00am</span><span>Reformer Pilates or Group Fitness</span></div>
-        <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">2:30pm</span><span>Lunch + poolside chill</span></div>
-        <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">3:30pm</span><span>Free time — massage, surf, explore or rest</span></div>
-        <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">6:00pm</span><span>Evening Yin</span></div>
-        <div style="display:flex; gap:1rem; padding:0.35rem 0;"><span style="color:var(--stone); min-width:55px;">7:30pm</span><span>Dinner</span></div>
-      </div>
-      <div style="margin-top:1.2rem; padding:1rem; background:var(--sand); font-size:0.75rem; color:var(--bark); font-style:italic;">Schedule may flex based on group energy. Meal times are suggestions — eat when it suits you.</div>
-    </div>
-
-    <!-- Arrival & Departure -->
-    <div style="background:var(--white); padding:2.5rem 2rem;">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">Arrival &amp; Departure</div>
-      <div style="font-size:0.82rem; color:var(--bark); margin-bottom:1.5rem;">
-        <div style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--bark); margin-bottom:0.5rem;">Arrival Day — Sep 30</div>
-        <div style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1.2rem;">
-          <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">2:00pm</span><span style="font-size:0.78rem;">Check-in opens</span></div>
-          <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">6:00pm</span><span style="font-size:0.78rem;">Welcome Yin — settle in &amp; unwind</span></div>
-          <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">7:30pm</span><span style="font-size:0.78rem;">Welcome dinner</span></div>
+        <div style="background:var(--white); padding:2.5rem 2rem;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">Securing Your Spot</div>
+          <p style="font-size:0.85rem; color:var(--bark); margin-bottom:1rem;">A non-refundable deposit of <strong style="color:var(--ink);">$500</strong> secures your place. Full payment can be made at time of booking or closer to the retreat date.</p>
+          <p style="font-size:0.85rem; color:var(--bark); margin-bottom:1rem;">Bank transfer details will be provided on enquiry. Invoices available on request.</p>
+          <p style="font-size:0.85rem; color:var(--bark);">Questions? Reach out at <strong style="color:var(--ink);">mother-food@outlook.com</strong> or 0487 400 753.</p>
         </div>
-        <div style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--bark); margin-bottom:0.5rem;">Departure Day — Oct 4</div>
-        <div style="display:flex; flex-direction:column; gap:0.4rem;">
-          <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">8:00am</span><span style="font-size:0.78rem;">Closing Yin — reflect &amp; close</span></div>
-          <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">11:00am</span><span style="font-size:0.78rem;">Check-out</span></div>
+
+        <div style="background:var(--white); padding:2.5rem 2rem;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">Sample Daily Flow</div>
+          <div style="font-size:0.78rem; color:var(--bark); line-height:1.9;">
+            <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">7:00am</span><span>Optional coffee or light snack</span></div>
+            <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">8:00am</span><span>Morning yoga — gentle flow with pranayama &amp; meditation</span></div>
+            <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">9:30am</span><span>Breakfast</span></div>
+            <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">11:00am</span><span>Reformer Pilates or Group Fitness</span></div>
+            <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">2:30pm</span><span>Lunch + poolside chill</span></div>
+            <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">3:30pm</span><span>Free time — massage, surf, explore or rest</span></div>
+            <div style="display:flex; gap:1rem; padding:0.35rem 0; border-bottom:1px solid var(--stone);"><span style="color:var(--stone); min-width:55px;">6:00pm</span><span>Evening Yin</span></div>
+            <div style="display:flex; gap:1rem; padding:0.35rem 0;"><span style="color:var(--stone); min-width:55px;">7:30pm</span><span>Dinner</span></div>
+          </div>
+          <div style="margin-top:1.2rem; padding:1rem; background:var(--sand); font-size:0.75rem; color:var(--bark); font-style:italic;">Schedule may flex based on group energy. Meal times are suggestions — eat when it suits you.</div>
         </div>
+
+        <div style="background:var(--white); padding:2.5rem 2rem;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">Arrival &amp; Departure</div>
+          <div style="font-size:0.82rem; color:var(--bark); margin-bottom:1.5rem;">
+            <div style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--bark); margin-bottom:0.5rem;">Arrival Day — Sep 30</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1.2rem;">
+              <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">2:00pm</span><span style="font-size:0.78rem;">Check-in opens</span></div>
+              <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">6:00pm</span><span style="font-size:0.78rem;">Welcome Yin — settle in &amp; unwind</span></div>
+              <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">7:30pm</span><span style="font-size:0.78rem;">Welcome dinner</span></div>
+            </div>
+            <div style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--bark); margin-bottom:0.5rem;">Departure Day — Oct 4</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem;">
+              <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">8:00am</span><span style="font-size:0.78rem;">Closing Yin — reflect &amp; close</span></div>
+              <div style="display:flex; gap:1rem;"><span style="color:var(--stone); min-width:55px; font-size:0.78rem;">11:00am</span><span style="font-size:0.78rem;">Check-out</span></div>
+            </div>
+          </div>
+          <div style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--bark); margin-bottom:0.5rem;">Getting There</div>
+          <p style="font-size:0.78rem; color:var(--bark); margin-bottom:0.5rem;">Fly into <strong style="color:var(--ink);">Denpasar (DPS)</strong>. Try to arrive before 2pm on Sep 30.</p>
+          <p style="font-size:0.78rem; color:var(--bark);">Airport transfers not included. Miri can organise a trusted driver at additional cost — send your flight details once booked.</p>
+        </div>
+
+        <div style="background:var(--white); padding:2.5rem 2rem;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">What to Pack</div>
+          <ul style="list-style:none; font-size:0.82rem; color:var(--bark); line-height:1.9;">
+            <li>— Yoga &amp; Pilates wear (light &amp; breathable)</li>
+            <li>— Pilates grip socks</li>
+            <li>— Sweat towel &amp; swimwear</li>
+            <li>— Casual evening outfit &amp; sandals</li>
+            <li>— Journal &amp; pen</li>
+            <li>— Power adapter (Bali uses 2-prong Euro plug)</li>
+            <li>— Sunscreen, mozzie spray &amp; any meds</li>
+            <li>— Water bottle</li>
+            <li style="font-style:italic; color:var(--stone);">Optional: eye pillow, fave book or crystal</li>
+          </ul>
+          <div style="margin-top:1.2rem; padding:1rem; background:var(--sand); font-size:0.75rem; color:var(--bark);">Please send through any dietary requirements or health notes when you enquire.</div>
+        </div>
+
       </div>
-      <div style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--bark); margin-bottom:0.5rem;">Getting There</div>
-      <p style="font-size:0.78rem; color:var(--bark); margin-bottom:0.5rem;">Fly into <strong style="color:var(--ink);">Denpasar (DPS)</strong>. Try to arrive before 2pm on Sep 30.</p>
-      <p style="font-size:0.78rem; color:var(--bark);">Airport transfers not included. Miri can organise a trusted driver at additional cost — send your flight details once booked.</p>
     </div>
-
-    <!-- What to Pack -->
-    <div style="background:var(--white); padding:2.5rem 2rem;">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.2rem;">What to Pack</div>
-      <ul style="list-style:none; font-size:0.82rem; color:var(--bark); line-height:1.9;">
-        <li>— Yoga &amp; Pilates wear (light &amp; breathable)</li>
-        <li>— Pilates grip socks</li>
-        <li>— Sweat towel &amp; swimwear</li>
-        <li>— Casual evening outfit &amp; sandals</li>
-        <li>— Journal &amp; pen</li>
-        <li>— Power adapter (Bali uses 2-prong Euro plug)</li>
-        <li>— Sunscreen, mozzie spray &amp; any meds</li>
-        <li>— Water bottle</li>
-        <li style="font-style:italic; color:var(--stone);">Optional: eye pillow, fave book or crystal</li>
-      </ul>
-      <div style="margin-top:1.2rem; padding:1rem; background:var(--sand); font-size:0.75rem; color:var(--bark);">Please send through any dietary requirements or health notes when you enquire.</div>
-    </div>
-
-  </div>
-</div>
-```
-
   </section>
 
   <section id="contact">
@@ -665,19 +539,10 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
       </div>
       <form class="contact-form" action="https://formspree.io/f/xeevwkrr" method="POST">
         <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" name="first_name" placeholder="Your first name" />
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" name="last_name" placeholder="Your last name" />
-          </div>
+          <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Your first name" /></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Your last name" /></div>
         </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="your@email.com" />
-        </div>
+        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" /></div>
         <div class="form-group">
           <label>What are you interested in?</label>
           <select name="interest">
@@ -690,17 +555,14 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
             <option>Private Sessions</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea name="message" placeholder="Tell me a little about yourself and any questions you have…"></textarea>
-        </div>
+        <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell me a little about yourself and any questions you have…"></textarea></div>
         <button class="btn-submit" type="submit">Send Message</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <div class="footer-logo"><img src="308AE360-B2D4-419D-9E6D-B8D792F654AD.png" alt="The Balance Method" style="height:80px; width:auto;" /></div>
+    <div class="footer-logo">The Balance Method</div>
     <div class="footer-copy">© 2026 Miranda Radulovich. All rights reserved.</div>
     <div class="footer-links">
       <a href="#about">About</a>
@@ -710,22 +572,17 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
   </footer>
 
   <script>
-    // Force scroll to top on page load
     window.onbeforeunload = function() { window.scrollTo(0, 0); }
     history.scrollRestoration = 'manual';
     window.addEventListener('load', function() { window.scrollTo(0, 0); });
   </script>
 
   <script>
-    // Countdown to Sep 30 2025
     const target = new Date('2026-06-30T00:00:00');
     function updateCountdown() {
       const now = new Date();
       const diff = target - now;
-      if (diff <= 0) {
-        document.getElementById('early-bird').style.display = 'none';
-        return;
-      }
+      if (diff <= 0) { document.getElementById('early-bird').style.display = 'none'; return; }
       const d = Math.floor(diff / (1000*60*60*24));
       const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
       const m = Math.floor((diff % (1000*60*60)) / (1000*60));

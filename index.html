@@ -231,16 +231,10 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
     </ul>
   </nav>
 
-  <!-- EARLY BIRD BANNER -->
+  <!-- EARLY BIRD SOLD OUT BANNER -->
 
   <div class="early-bird" id="early-bird">
-    <p>🌿 Early Bird Special — First 3 tickets at 20% off · Offer ends 31 October 2026</p>
-    <div class="countdown" id="countdown">
-      <div class="countdown-block"><span class="countdown-num" id="days">00</span><span class="countdown-label">Days</span></div>
-      <div class="countdown-block"><span class="countdown-num" id="hours">00</span><span class="countdown-label">Hours</span></div>
-      <div class="countdown-block"><span class="countdown-num" id="mins">00</span><span class="countdown-label">Minutes</span></div>
-      <div class="countdown-block"><span class="countdown-num" id="secs">00</span><span class="countdown-label">Seconds</span></div>
-    </div>
+    <p>🌿 Early Bird spots are SOLD OUT — spots still available at standard rate for The Balance Method 3.0, Apr 13–17, 2027</p>
   </div>
 
   <section class="hero" id="home">
@@ -700,29 +694,6 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
     window.onbeforeunload = function() { window.scrollTo(0, 0); }
     history.scrollRestoration = 'manual';
     window.addEventListener('load', function() { window.scrollTo(0, 0); });
-  </script>
-
-  <script>
-    // Countdown to early bird offer deadline
-    const target = new Date('2026-10-31T00:00:00');
-    function updateCountdown() {
-      const now = new Date();
-      const diff = target - now;
-      if (diff <= 0) {
-        document.getElementById('early-bird').style.display = 'none';
-        return;
-      }
-      const d = Math.floor(diff / (1000*60*60*24));
-      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-      const s = Math.floor((diff % (1000*60)) / 1000);
-      document.getElementById('days').textContent = String(d).padStart(2,'0');
-      document.getElementById('hours').textContent = String(h).padStart(2,'0');
-      document.getElementById('mins').textContent = String(m).padStart(2,'0');
-      document.getElementById('secs').textContent = String(s).padStart(2,'0');
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
   </script>
 
 </body>

@@ -257,6 +257,27 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
   .programs-grid { grid-template-columns: 1fr; }
   .program-cover { aspect-ratio: auto; min-height: 180px; gap: 1.5rem; }
 }
+
+/* NEW PROGRAM COVERS + HELP CARD */
+.program-cover.sage { background: #5E7B69; }
+.program-cover.clay { background: #B5654B; }
+.program-card.help { justify-content: center; }
+.program-card.help .program-buy { border-top: none; padding-top: 0; }
+/* MENTORSHIP (wide card in What I Offer) */
+.service-card.wide { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 3rem; padding: 2.2rem 2rem; }
+.service-card.wide:hover { transform: none; }
+.service-wide-text { max-width: 560px; }
+.service-wide-side { min-width: 260px; }
+.service-link { display: inline-block; margin-top: 1rem; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.service-link:hover { color: var(--bark); }
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card.wide { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .service-wide-side { min-width: 0; width: 100%; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
   </style>
 </head>
 <body>
@@ -491,6 +512,7 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
         </ul>
         <a href="#contact" class="btn-light">Book This</a>
       </div>
+    </div>
   </section>
 
   <!-- SERVICES -->
@@ -522,6 +544,17 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
         <h3>Retreats</h3>
         <p>Small group international retreats combining yoga, Pilates, breathwork, and nourishment. Designed to restore, challenge, and reconnect you — deeply.</p>
         <div class="service-price"><a href="#retreats" style="color:var(--ink); text-decoration:none; letter-spacing:0.15em; text-transform:uppercase; font-size:0.72rem;">View Upcoming Retreats →</a></div>
+      </div>
+      <div class="service-card wide">
+        <div class="service-wide-text">
+          <div class="service-icon">05</div>
+          <h3>Mentorship</h3>
+          <p>Four weeks of one-on-one guidance with Miri, tailored to you and your goals. Available in person or online.</p>
+        </div>
+        <div class="service-wide-side">
+          <div class="service-price">$480 / 4 weeks · In person or online</div>
+          <a href="#contact" class="service-link">Enquire About Mentorship →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -582,6 +615,54 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
         </div>
       </div>
 
+      <!-- FRONT SPLITS PROGRAM -->
+      <div class="program-card">
+        <div class="program-cover sage">
+          <div class="program-cover-brand">The Balance Method</div>
+          <div class="program-cover-title">Front<br/><em>Splits</em></div>
+          <div class="program-cover-tag">4-week frontal splits plan</div>
+        </div>
+        <div class="program-body">
+          <div class="program-level">All levels</div>
+          <h3>Front Splits Program</h3>
+          <p>A simple 4-week plan to work toward your front splits. Open the hamstrings and hip flexors, then build the strength to hold the stretch.</p>
+          <ul class="program-list">
+            <li>4 weeks · 3 sessions per week</li>
+            <li>Home &amp; gym options for every exercise</li>
+            <li>Stick-figure demos &amp; training log</li>
+            <li>Demo videos available on request</li>
+          </ul>
+          <div class="program-buy">
+            <div class="program-price">$39<span>AUD</span></div>
+            <a href="mailto:mother-food@outlook.com?subject=Front%20Splits%20Program%20Purchase&amp;body=Hi%20Miri%2C%20I'd%20like%20to%20purchase%20the%20Front%20Splits%20Program.%20Please%20send%20me%20the%20details." class="program-btn">Email to Purchase</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDE SPLITS PROGRAM -->
+      <div class="program-card">
+        <div class="program-cover clay">
+          <div class="program-cover-brand">The Balance Method</div>
+          <div class="program-cover-title">Side<br/><em>Splits</em></div>
+          <div class="program-cover-tag">4-week lateral splits plan</div>
+        </div>
+        <div class="program-body">
+          <div class="program-level">All levels</div>
+          <h3>Side Splits Program</h3>
+          <p>A simple 4-week plan to work toward your side splits (middle splits). Open the inner thighs and hips, then build the strength to hold the stretch.</p>
+          <ul class="program-list">
+            <li>4 weeks · 3 sessions per week</li>
+            <li>Home &amp; gym options for every exercise</li>
+            <li>Stick-figure demos &amp; training log</li>
+            <li>Demo videos available on request</li>
+          </ul>
+          <div class="program-buy">
+            <div class="program-price">$39<span>AUD</span></div>
+            <a href="mailto:mother-food@outlook.com?subject=Side%20Splits%20Program%20Purchase&amp;body=Hi%20Miri%2C%20I'd%20like%20to%20purchase%20the%20Side%20Splits%20Program.%20Please%20send%20me%20the%20details." class="program-btn">Email to Purchase</a>
+          </div>
+        </div>
+      </div>
+
       <!-- MIRROR WORK -->
       <div class="program-card">
         <div class="program-cover light">
@@ -602,6 +683,18 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
           <div class="program-buy">
             <div class="program-price">$19<span>AUD</span></div>
             <a href="mailto:mother-food@outlook.com?subject=Mirror%20Work%20Practice%20Purchase&amp;body=Hi%20Miri%2C%20I'd%20like%20to%20purchase%20the%20Mirror%20Work%20Practice.%20Please%20send%20me%20the%20details." class="program-btn">Email to Purchase</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOT SURE -->
+      <div class="program-card help">
+        <div class="program-body">
+          <div class="program-level">Not sure where to start?</div>
+          <h3>Ask Miri</h3>
+          <p>Tell me your goals and where you're at, and I'll point you to the right program. Phone consults are available at an extra $120 / hour.</p>
+          <div class="program-buy">
+            <a href="mailto:mother-food@outlook.com?subject=Which%20program%20is%20right%20for%20me%3F" class="program-btn">Email Miri</a>
           </div>
         </div>
       </div>
@@ -796,6 +889,8 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
             <option>Intuitive Eating Counselling</option>
             <option>Breathwork</option>
             <option>Private Sessions</option>
+            <option>Mentorship</option>
+            <option>Digital Programs</option>
           </select>
         </div>
         <div class="form-group">

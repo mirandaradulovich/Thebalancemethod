@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="Rze458a5ZzXCbqEGY9TyJOeiuEj-8ntRGJ3t_B8CjXQ" />
-  <title>The Balance Method — Yoga, Pilates &amp; Wellness Retreats Bali | Miranda Radulovich Perth</title>
+  <title>The Balance Method — Yoga, Pilates &amp; Wellness Retreats Bali 2027 | Miranda Radulovich Perth</title>
   <meta name="description" content="Join Miri Radulovich for transformative yoga, Pilates and wellness retreats in Bali. Intuitive eating coaching, breathwork and 1:1 sessions available in Scarborough, Perth and online." />
-  <meta name="keywords" content="yoga retreat Bali, Pilates retreat Bali, wellness retreat 2026, yoga Perth, intuitive eating coach Perth, breathwork Perth, Miranda Radulovich" />
-  <meta property="og:title" content="The Balance Method — Yoga &amp; Pilates Retreats Bali 2026" />
+  <meta name="keywords" content="yoga retreat Bali, Pilates retreat Bali, wellness retreat 2027, yoga Perth, intuitive eating coach Perth, breathwork Perth, Miranda Radulovich" />
+  <meta property="og:title" content="The Balance Method — Yoga &amp; Pilates Retreats Bali 2027" />
   <meta property="og:description" content="Transformative retreats in Bali combining yoga, Pilates, breathwork and nourishment. Led by Miranda Radulovich, Perth." />
   <meta property="og:type" content="website" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
@@ -261,8 +261,15 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
 /* NEW PROGRAM COVERS + HELP CARD */
 .program-cover.sage { background: #5E7B69; }
 .program-cover.clay { background: #B5654B; }
-.program-card.help { justify-content: center; }
-.program-card.help .program-buy { border-top: none; padding-top: 0; }
+.program-cover.deep { background: #3F5A4B; }
+.program-card.help { grid-column: 1 / -1; }
+.program-card.help:hover { transform: none; }
+.program-card.help .program-body { flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; padding: 2rem 1.8rem; }
+.help-text { max-width: 600px; }
+.help-text p { margin-bottom: 0; }
+@media (max-width: 900px) {
+  .program-card.help .program-body { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+}
 /* MENTORSHIP (wide card in What I Offer) */
 .service-card.wide { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 3rem; padding: 2.2rem 2rem; }
 .service-card.wide:hover { transform: none; }
@@ -438,7 +445,7 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
           <li style="padding:0.6rem 0; border-bottom:1px solid var(--stone); display:flex; gap:0.75rem;"><span style="color:var(--bark);">—</span>Recovery centre session — ice bath &amp; sauna</li>
           <li style="padding:0.6rem 0; border-bottom:1px solid var(--stone); display:flex; gap:0.75rem;"><span style="color:var(--bark);">—</span>Retreat goodie bag</li>
           <li style="padding:0.6rem 0; border-bottom:1px solid var(--stone); display:flex; gap:0.75rem;"><span style="color:var(--bark);">—</span>Accommodation at Komune Resort, Keramas Bali</li>
-          <li style="padding:0.6rem 0; display:flex; gap:0.75rem;"><span style="color:var(--bark);">—</span>Limited to 12 guests</li>
+          <li style="padding:0.6rem 0; display:flex; gap:0.75rem;"><span style="color:var(--bark);">—</span>Limited to 18 guests</li>
         </ul>
         <a href="#contact" style="display:inline-block; margin-top:2rem; padding:1rem 2.5rem; border:1px solid var(--ink); color:var(--ink); text-decoration:none; font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase; transition:all 0.3s; text-align:center;">Book Your Spot</a>
       </div>
@@ -615,6 +622,30 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
         </div>
       </div>
 
+      <!-- HANDSTANDS & MOBILITY -->
+      <div class="program-card">
+        <div class="program-cover deep">
+          <div class="program-cover-brand">The Balance Method</div>
+          <div class="program-cover-title">Handstands<br/><em>&amp; Mobility</em></div>
+          <div class="program-cover-tag">Strength, flexibility &amp; handstand drills</div>
+        </div>
+        <div class="program-body">
+          <div class="program-level">Complete toolkit</div>
+          <h3>Handstands &amp; Mobility</h3>
+          <p>A full toolkit for building handstands: wrist, shoulder and spine mobility, core and hip strength, and step-by-step drills, plus a 4-week program to take you from your first wall kick-up toward a freestanding handstand.</p>
+          <ul class="program-list">
+            <li>80+ drills with stick-figure demos</li>
+            <li>Plus a 4-week handstand program</li>
+            <li>Self-assessment, troubleshooting &amp; training log</li>
+            <li>Demo videos available on request</li>
+          </ul>
+          <div class="program-buy">
+            <div class="program-price">$79<span>AUD</span></div>
+            <a href="mailto:mother-food@outlook.com?subject=Handstands%20and%20Mobility%20Purchase&amp;body=Hi%20Miri%2C%20I'd%20like%20to%20purchase%20the%20Handstands%20and%20Mobility%20program.%20Please%20send%20me%20the%20details." class="program-btn">Email to Purchase</a>
+          </div>
+        </div>
+      </div>
+
       <!-- FRONT SPLITS PROGRAM -->
       <div class="program-card">
         <div class="program-cover sage">
@@ -690,12 +721,12 @@ footer { background: var(--ink); color: var(--stone); padding: 2.5rem 3rem; disp
       <!-- NOT SURE -->
       <div class="program-card help">
         <div class="program-body">
-          <div class="program-level">Not sure where to start?</div>
-          <h3>Ask Miri</h3>
-          <p>Tell me your goals and where you're at, and I'll point you to the right program. Phone consults are available at an extra $120 / hour.</p>
-          <div class="program-buy">
-            <a href="mailto:mother-food@outlook.com?subject=Which%20program%20is%20right%20for%20me%3F" class="program-btn">Email Miri</a>
+          <div class="help-text">
+            <div class="program-level">Not sure where to start?</div>
+            <h3>Ask Miri</h3>
+            <p>Tell me your goals and where you're at, and I'll point you to the right program. Phone consults are available at an extra $120 / hour.</p>
           </div>
+          <a href="mailto:mother-food@outlook.com?subject=Which%20program%20is%20right%20for%20me%3F" class="program-btn">Email Miri</a>
         </div>
       </div>
 
